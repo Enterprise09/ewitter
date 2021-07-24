@@ -1,7 +1,10 @@
+import React from "react";
+import AppRouter from "./Router";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello Ewitter!</h1>{" "}
+      <AppRouter />
     </div>
   );
 }
