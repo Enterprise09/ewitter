@@ -6,6 +6,7 @@ import Home from "../routes/Home";
 const AppRouter = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
+    //use HashRouter for github page upload
     <Router>
       <Switch>
         {isLoggedIn ? (
