@@ -6,7 +6,7 @@ export default () => {
   const history = useHistory();
   const onLogOutClick = () => {
     authService.signOut();
-    history.push("/");
+    history.push("/"); //redirect to home
   };
   return (
     <>
