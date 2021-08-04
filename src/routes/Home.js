@@ -1,8 +1,22 @@
 import { dbService } from "fbase";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Home = () => {
   const [eweet, setEweet] = useState("");
+  const [eweets, setEweets] = useState([]);
+  const getEweets = async () => {
+    const dbEweets = await dbService.collection("nweets").get();
+    dbEweets.forEach((document) => {
+      const eweetObject = {
+        ...document.data(),
+        id: document.id,
+      };
+      setEweets((prev) => [eweetObject, ...prev]);
+    });
+  };
+  useEffect(() => {
+    getEweets();
+  }, []);
   const onSubmit = async (event) => {
     event.preventDefault();
     await dbService.collection("nweets").add({
@@ -29,6 +43,14 @@ const Home = () => {
         />
         <input type="submit" value="EWeet" />
       </form>
+      <div>
+        {eweets.map((eweet, index) => (
+          //<div key={eweet.id} /> //This is not working... Why?
+          <div key={eweet.id}>
+            <h4> {eweet.eweet} </h4>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
