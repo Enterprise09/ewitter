@@ -42,7 +42,6 @@ const Home = ({ userObj }) => {
       </form>
       <div>
         {eweets.map((eweet, index) => (
-          //<div key={eweet.id} /> //This is not working... Why?
           <div key={eweet.id}>
             <h4> {eweet.text} </h4>
           </div>
