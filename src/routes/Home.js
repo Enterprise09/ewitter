@@ -1,3 +1,4 @@
+import Eweet from "components/Eweet";
 import { dbService } from "fbase";
 import React, { useEffect, useState } from "react";
 
@@ -41,10 +42,12 @@ const Home = ({ userObj }) => {
         <input type="submit" value="EWeet" />
       </form>
       <div>
-        {eweets.map((eweet, index) => (
-          <div key={eweet.id}>
-            <h4> {eweet.text} </h4>
-          </div>
+        {eweets.map((eweet) => (
+          <Eweet
+            key={eweet.id}
+            eweetObj={eweet}
+            isOwner={eweet.creatorId === userObj.uid}
+          />
         ))}
       </div>
     </div>
