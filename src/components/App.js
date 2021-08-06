@@ -21,7 +21,6 @@ function App() {
         ) : (
           "Initializing . . . "
         )}
-        <footer>&copy; Ewitter {new Date().getFullYear()}</footer>
       </>
     </div>
   );
