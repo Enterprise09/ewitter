@@ -1,6 +1,7 @@
 import Eweet from "components/Eweet";
-import { dbService } from "fbase";
+import { dbService, storageService } from "fbase";
 import React, { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const Home = ({ userObj }) => {
   const [eweet, setEweet] = useState("");
@@ -17,12 +18,16 @@ const Home = ({ userObj }) => {
   }, []);
   const onSubmit = async (event) => {
     event.preventDefault();
-    await dbService.collection("eweets").add({
-      text: eweet,
-      createAt: Date.now(),
-      creatorId: userObj.uid,
-    });
-    setEweet("");
+    const fileRef = storageService.ref().child(`${userObj.uid}/${uuidv4()}`);
+    const response = await fileRef.putString(attachment, "data_url");
+    console.log(response);
+
+    // await dbService.collection("eweets").add({
+    //   text: eweet,
+    //   createAt: Date.now(),
+    //   creatorId: userObj.uid,
+    // });
+    // setEweet("");
   };
   const onChange = (event) => {
     const {
@@ -37,7 +42,6 @@ const Home = ({ userObj }) => {
     const theFile = files[0];
     const reader = new FileReader();
     reader.onloadend = (finishedEvent) => {
-      console.log(finishedEvent);
       const {
         currentTarget: { result },
       } = finishedEvent;
