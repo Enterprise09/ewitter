@@ -9,7 +9,7 @@ const AppRouter = ({ isLoggedIn, userObj }) => {
   return (
     //use HashRouter for github page upload
     <Router>
-      {isLoggedIn && <Navigation />}
+      {isLoggedIn && <Navigation userObj={userObj} />}
       <Switch>
         {isLoggedIn ? (
           <>
