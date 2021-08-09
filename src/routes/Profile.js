@@ -2,7 +2,7 @@ import { authService, dbService } from "fbase";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-export default ({ userObj }) => {
+export default ({ refreshUser, userObj }) => {
   const history = useHistory();
   const [newDisplayName, setnewDisplayName] = useState(userObj.displayName);
   const onLogOutClick = () => {
@@ -26,9 +26,13 @@ export default ({ userObj }) => {
     } = event;
     setnewDisplayName(value);
   };
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
     if (userObj.displayName !== newDisplayName) {
+      await userObj.updateProfile({
+        displayName: newDisplayName,
+      });
+      refreshUser();
     }
   };
   return (
