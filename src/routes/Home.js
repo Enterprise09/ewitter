@@ -2,6 +2,7 @@ import Eweet from "components/Eweet";
 import EweetFactory from "components/EweetsFactory";
 import { dbService } from "fbase";
 import React, { useEffect, useState } from "react";
+import "../css/Home.css";
 
 const Home = ({ userObj }) => {
   const [eweets, setEweets] = useState([]);
@@ -15,7 +16,7 @@ const Home = ({ userObj }) => {
     });
   }, []);
   return (
-    <div>
+    <div className="home_container">
       <EweetFactory userObj={userObj} />
       <div>
         {eweets.map((eweet) => (

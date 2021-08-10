@@ -1,0 +1,70 @@
+.AuthContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.authBtns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+}
+
+.social_btn {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 0px;
+  font-size: 12px;
+  text-align: center;
+  width: 150px;
+  background-color: white;
+}
+
+.auth_input {
+  max-width: 320px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.auth_submit {
+  text-align: center;
+  background: #04aaff;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.auth_error {
+  color: tomato;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.auth_switch {
+  color: #04aaff;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  display: block;
+  font-size: 12px;
+  text-decoration: underline;
+}

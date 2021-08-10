@@ -1,0 +1,34 @@
+.eweetsfactory_form {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.eweets_input {
+  padding: 8px;
+  border: 1.5px solid #04abff;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.eweets_submit {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #04abff;
+  color: white;
+  border-radius: 1000px;
+  position: relative;
+  left: -30px;
+}
+
+.attach_file_label {
+  font-size: 13px;
+  color: #04abff;
+  cursor: pointer;
+}
+
+.eweets_photoBtn {
+  display: none;
+}

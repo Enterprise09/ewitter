@@ -1,6 +1,9 @@
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { dbService, storageService } from "fbase";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import "../css/EweetsFactory.css";
 
 const EweetFactory = ({ userObj }) => {
   const [eweet, setEweet] = useState("");
@@ -47,16 +50,30 @@ const EweetFactory = ({ userObj }) => {
   };
   const onClearAttachment = () => setAttachment(null);
   return (
-    <form onSubmit={onSubmit}>
+    <form className="eweetsfactory_form" onSubmit={onSubmit}>
+      <div>
+        <input
+          className="eweets_input"
+          value={eweet}
+          onChange={onChange}
+          type="text"
+          placeholder="What's on your mind"
+          maxLength={120}
+        />
+        <input className="eweets_submit" type="submit" value="&rarr;" />
+      </div>
+
+      <br />
+      <label className="attach_file_label" for="attach-file" value="&rarr;">
+        <span>Add photos</span> <FontAwesomeIcon icon={faPlus} />
+      </label>
       <input
-        value={eweet}
-        onChange={onChange}
-        type="text"
-        placeholder="What's on your mind"
-        maxLength={120}
+        className="eweets_photoBtn"
+        id="attach-file"
+        type="file"
+        accept="image/*"
+        onChange={onFileChange}
       />
-      <input type="file" accept="image/*" onChange={onFileChange} />
-      <input type="submit" value="EWeet" />
       {attachment && (
         <div>
           <img src={attachment} width="50px" height="50px" />

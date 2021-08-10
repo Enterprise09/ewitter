@@ -1,5 +1,8 @@
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { dbService, storageService } from "fbase";
 import React, { useState } from "react";
+import "../css/Eweet.css";
 
 const Eweet = ({ eweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -49,16 +52,29 @@ const Eweet = ({ eweetObj, isOwner }) => {
         </>
       ) : (
         <>
-          <h4> {eweetObj.text} </h4>
-          {eweetObj.attachmentUrl && (
-            <img src={eweetObj.attachmentUrl} width="50px" height="50px" />
-          )}
-          {isOwner && (
-            <>
-              <button onClick={onDeleteClick}>Delete Eweet</button>
-              <button onClick={toggleEditing}>Edit Eweet</button>
-            </>
-          )}
+          <div className="eweet_boxs">
+            <div className="eweet_box">
+              <span className="eweet_text">{eweetObj.text}</span>
+              {isOwner && (
+                <>
+                  <button className="eweet_iconBtn" onClick={onDeleteClick}>
+                    <FontAwesomeIcon icon={faTrash} color="grey" />
+                  </button>
+                  <button className="eweet_iconBtn" onClick={toggleEditing}>
+                    <FontAwesomeIcon icon={faEdit} color="grey" />
+                  </button>
+                </>
+              )}
+              {eweetObj.attachmentUrl && (
+                <img
+                  className="eweet_img"
+                  src={eweetObj.attachmentUrl}
+                  width="50px"
+                  height="50px"
+                />
+              )}
+            </div>
+          </div>
         </>
       )}
     </div>

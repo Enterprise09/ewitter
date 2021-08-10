@@ -1,0 +1,26 @@
+.eweet_boxs {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eweet_box {
+  background-color: white;
+  max-width: 320px;
+  width: 100%;
+  padding: 10px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.eweet_text {
+  vertical-align: middle;
+}
+
+.eweet_img {
+  border-radius: 1000px;
+}
+
+.eweet_iconBtn {
+}
