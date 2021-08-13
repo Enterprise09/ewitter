@@ -6,8 +6,8 @@
 
 .eweets_input {
   padding: 8px;
-  border: 1.5px solid #04abff;
-  max-width: 250px;
+  border: 1.5px solid rgb(138, 65, 255);
+  max-width: 320px;
   width: 100%;
   border-radius: 20px;
 }
@@ -16,7 +16,7 @@
   border: none;
   padding: 10px;
   cursor: pointer;
-  background-color: #04abff;
+  background-color: rgb(138, 65, 255);
   color: white;
   border-radius: 1000px;
   position: relative;
@@ -25,7 +25,7 @@
 
 .attach_file_label {
   font-size: 13px;
-  color: #04abff;
+  color: rgb(138, 65, 255);
   cursor: pointer;
 }
 

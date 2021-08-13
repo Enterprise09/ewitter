@@ -51,7 +51,12 @@ const EweetFactory = ({ userObj }) => {
   const onClearAttachment = () => setAttachment(null);
   return (
     <form className="eweetsfactory_form" onSubmit={onSubmit}>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <input
           className="eweets_input"
           value={eweet}

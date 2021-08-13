@@ -4,7 +4,7 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
+  background-color: rgb(230, 212, 236);
 }
 
 .container {
@@ -44,7 +44,7 @@
 
 .auth_submit {
   text-align: center;
-  background: #04aaff;
+  background: rgb(230, 212, 236);
   border-radius: 20px;
   padding: 10px;
   color: white;
@@ -60,7 +60,7 @@
 }
 
 .auth_switch {
-  color: #04aaff;
+  color: rgb(230, 212, 236);
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 50px;

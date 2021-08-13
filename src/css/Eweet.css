@@ -1,26 +1,33 @@
 .eweet_boxs {
-  background-color: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .eweet_box {
-  background-color: white;
+  background-color: rgba(232, 215, 238, 0.7);
+  box-shadow: 3px 3px rgb(138, 65, 255);
+  display: flex;
   max-width: 320px;
   width: 100%;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   align-self: center;
+  align-items: center;
   border-radius: 10px;
 }
 
 .eweet_text {
-  vertical-align: middle;
+  flex: 6;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .eweet_img {
   border-radius: 1000px;
+  margin-right: 10px;
 }
 
-.eweet_iconBtn {
+.iconBtn_box {
+  flex: 1;
 }

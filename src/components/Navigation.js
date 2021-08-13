@@ -3,47 +3,35 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
+import "../css/Navigation.css";
 
 const Navigation = ({ userObj }) => (
-  <nav
-    style={{
-      textAlign: "center",
-    }}
-  >
+  <nav className="nav">
     <ul
       style={{
-        listStyle: "none",
-        display: "flex",
-        justifyContent: "center",
-        marginTop: "50px",
+        textAlign: "center",
+        alignItems: "center",
+        alignContent: "center",
       }}
     >
       <li>
-        <Link to="/" style={{ marginRight: "20px" }}>
-          <FontAwesomeIcon icon={faTwitter} color={"#04AAFF"} size="2x" />
+        <Link to="/" style={{ marginRight: "20px", flex: "1" }}>
+          <FontAwesomeIcon
+            className="nav_icon"
+            icon={faTwitter}
+            color={"rgb(138, 65, 255)"}
+            size="2x"
+          />
         </Link>
       </li>
       <li>
-        <Link
-          to="/profile"
-          style={{
-            marginLeft: "10px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            fontSize: "12px",
-          }}
-        >
-          <FontAwesomeIcon icon={faUser} color={"#04AAFF"} size="2x" />
-          <span
-            style={{
-              marginTop: "10px",
-            }}
-          >
-            {userObj.displayName
-              ? `${userObj.displayName}'s Profile`
-              : "Profile"}
-          </span>
+        <Link className="profile_link" to="/profile">
+          <FontAwesomeIcon
+            className="nav_icon"
+            icon={faUser}
+            color={"rgb(138, 65, 255)"}
+            size="2x"
+          />
         </Link>
       </li>
     </ul>

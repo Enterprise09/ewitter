@@ -55,23 +55,33 @@ const Eweet = ({ eweetObj, isOwner }) => {
           <div className="eweet_boxs">
             <div className="eweet_box">
               <span className="eweet_text">{eweetObj.text}</span>
-              {isOwner && (
-                <>
-                  <button className="eweet_iconBtn" onClick={onDeleteClick}>
-                    <FontAwesomeIcon icon={faTrash} color="grey" />
-                  </button>
-                  <button className="eweet_iconBtn" onClick={toggleEditing}>
-                    <FontAwesomeIcon icon={faEdit} color="grey" />
-                  </button>
-                </>
-              )}
-              {eweetObj.attachmentUrl && (
+              {eweetObj.attachmentUrl ? (
                 <img
                   className="eweet_img"
                   src={eweetObj.attachmentUrl}
                   width="50px"
                   height="50px"
                 />
+              ) : (
+                <img
+                  className="eweet_img"
+                  src={eweetObj.attachmentUrl}
+                  width="50px"
+                  height="50px"
+                  style={{ visibility: "hidden" }}
+                />
+              )}
+              {isOwner && (
+                <>
+                  <div className="iconBtn_box">
+                    <button className="eweet_iconBtn" onClick={onDeleteClick}>
+                      <FontAwesomeIcon icon={faTrash} color="grey" />
+                    </button>
+                    <button className="eweet_iconBtn" onClick={toggleEditing}>
+                      <FontAwesomeIcon icon={faEdit} color="grey" />
+                    </button>
+                  </div>
+                </>
               )}
             </div>
           </div>
