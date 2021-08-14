@@ -18,6 +18,7 @@ const Navigation = ({ userObj }) => (
             size="2x"
           />
         </Link>
+        <div className="nav_username">Ewitter</div>
       </li>
       <li>
         <Link className="profile_link" to="/profile">
@@ -28,6 +29,9 @@ const Navigation = ({ userObj }) => (
             size="2x"
           />
         </Link>
+        <div className="nav_username">
+          {userObj.displayName ? `${userObj.displayName}` : "Profile"}
+        </div>
       </li>
       <li className="empty_li"></li>
     </ul>

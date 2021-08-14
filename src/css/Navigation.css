@@ -26,3 +26,9 @@ li {
   color: rgb(138, 65, 255);
   font-weight: bold;
 }
+
+.nav_username {
+  margin-top: 3px;
+  color: rgb(138, 65, 255);
+  font-weight: bold;
+}
