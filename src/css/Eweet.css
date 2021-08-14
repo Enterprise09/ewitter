@@ -1,7 +1,39 @@
+.eweet_form_container {
+  display: flex;
+  justify-content: center;
+}
+
+.eweet_edit_form {
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgba(232, 215, 238, 0.7);
+  box-shadow: 3px 3px rgb(138, 65, 255);
+}
+
+.edit_btns {
+  flex: 1;
+}
+
+.eweet_edit_textInput {
+  flex: 8;
+  max-width: 320px;
+  width: 100%;
+  font-size: 15px;
+  border: 1px dashed red;
+  border-radius: 5px;
+}
+
+.eweetForm_cancel {
+  flex: 1;
+}
+
 .eweet_boxs {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .eweet_box {

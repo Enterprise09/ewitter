@@ -4,14 +4,7 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: rgb(230, 212, 236);
-}
-
-.container {
-  width: 100%;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
+  background-color: aliceblue;
 }
 
 .authBtns {
@@ -21,50 +14,23 @@
   max-width: 320px;
 }
 
-.social_btn {
+.social_btn_google,
+.social_btn_github {
   cursor: pointer;
-  border-radius: 20px;
+  border: none;
+  border-radius: 10px;
   padding: 10px 0px;
   font-size: 12px;
   text-align: center;
   width: 150px;
-  background-color: white;
 }
 
-.auth_input {
-  max-width: 320px;
-  width: 100%;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 1);
-  margin-bottom: 10px;
-  font-size: 12px;
-  color: black;
-}
-
-.auth_submit {
-  text-align: center;
-  background: rgb(230, 212, 236);
-  border-radius: 20px;
-  padding: 10px;
+.social_btn_github {
+  background-color: rgb(88, 88, 88);
   color: white;
-  cursor: pointer;
 }
 
-.auth_error {
-  color: tomato;
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.auth_switch {
-  color: rgb(230, 212, 236);
-  cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 50px;
-  display: block;
-  font-size: 12px;
-  text-decoration: underline;
+.social_btn_google {
+  background-color: rgb(247, 133, 133);
+  color: white;
 }

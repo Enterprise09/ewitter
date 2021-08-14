@@ -48,44 +48,39 @@ const EweetFactory = ({ userObj }) => {
     };
     reader.readAsDataURL(theFile);
   };
-  const onClearAttachment = () => setAttachment(null);
+  const onClearAttachment = () => setAttachment("");
   return (
-    <form className="eweetsfactory_form" onSubmit={onSubmit}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <input
-          className="eweets_input"
-          value={eweet}
-          onChange={onChange}
-          type="text"
-          placeholder="What's on your mind"
-          maxLength={120}
-        />
-        <input className="eweets_submit" type="submit" value="&rarr;" />
-      </div>
-
-      <br />
-      <label className="attach_file_label" for="attach-file" value="&rarr;">
-        <span>Add photos</span> <FontAwesomeIcon icon={faPlus} />
-      </label>
-      <input
-        className="eweets_photoBtn"
-        id="attach-file"
-        type="file"
-        accept="image/*"
-        onChange={onFileChange}
-      />
-      {attachment && (
-        <div>
-          <img src={attachment} width="50px" height="50px" />
-          <button onClick={onClearAttachment}>Clear</button>
+    <div className="eweetsfactory_container">
+      <form className="eweetsfactory_form" onSubmit={onSubmit}>
+        <div className="eweets_inputTextBox">
+          <input
+            className="eweets_input"
+            value={eweet}
+            onChange={onChange}
+            type="text"
+            placeholder="What's on your mind"
+            maxLength={120}
+          />
+          <input className="eweets_submit" type="submit" value="&rarr;" />
         </div>
-      )}
-    </form>
+        <label className="attach_file_label" for="attach-file" value="&rarr;">
+          <span>Add photos</span> <FontAwesomeIcon icon={faPlus} />
+        </label>
+        <input
+          className="eweets_photoBtn"
+          id="attach-file"
+          type="file"
+          accept="image/*"
+          onChange={onFileChange}
+        />
+        {attachment && (
+          <div>
+            <img src={attachment} width="50px" height="50px" />
+            <button onClick={onClearAttachment}>Clear</button>
+          </div>
+        )}
+      </form>
+    </div>
   );
 };
 

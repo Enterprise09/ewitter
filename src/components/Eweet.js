@@ -1,4 +1,10 @@
-import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBackspace,
+  faClosedCaptioning,
+  faEdit,
+  faTrash,
+  faWindowClose,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { dbService, storageService } from "fbase";
 import React, { useState } from "react";
@@ -36,17 +42,31 @@ const Eweet = ({ eweetObj, isOwner }) => {
         <>
           {isOwner && (
             <>
-              <form onSubmit={onSubmit}>
-                <input
-                  onChange={onChange}
-                  type="text"
-                  placeholder="Edit you eweet"
-                  value={newEweet}
-                  required
-                />
-                <input type="submit" value="Update eweet" />
-              </form>
-              <button onClick={toggleEditing}>Cancel</button>
+              <div className="eweet_form_container">
+                <form className="eweet_edit_form" onSubmit={onSubmit}>
+                  <input
+                    className="eweet_edit_textInput"
+                    onChange={onChange}
+                    type="text"
+                    placeholder="Edit you eweet"
+                    value={newEweet}
+                    required
+                  />
+                  <div className="edit_btns">
+                    <input
+                      className="eweetForm_submit"
+                      type="submit"
+                      value="&rarr;"
+                    />
+                    <button
+                      className="eweetForm_cancel"
+                      onClick={toggleEditing}
+                    >
+                      <FontAwesomeIcon icon={faWindowClose} color="grey" />
+                    </button>
+                  </div>
+                </form>
+              </div>
             </>
           )}
         </>

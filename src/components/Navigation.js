@@ -7,15 +7,10 @@ import "../css/Navigation.css";
 
 const Navigation = ({ userObj }) => (
   <nav className="nav">
-    <ul
-      style={{
-        textAlign: "center",
-        alignItems: "center",
-        alignContent: "center",
-      }}
-    >
+    <ul>
+      <li className="empty_li"></li>
       <li>
-        <Link to="/" style={{ marginRight: "20px", flex: "1" }}>
+        <Link to="/">
           <FontAwesomeIcon
             className="nav_icon"
             icon={faTwitter}
@@ -34,6 +29,7 @@ const Navigation = ({ userObj }) => (
           />
         </Link>
       </li>
+      <li className="empty_li"></li>
     </ul>
   </nav>
 );

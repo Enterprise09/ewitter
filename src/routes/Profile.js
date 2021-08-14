@@ -1,6 +1,7 @@
 import { authService, dbService } from "fbase";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import "../css/Profile.css";
 
 export default ({ refreshUser, userObj }) => {
   const history = useHistory();
@@ -37,16 +38,24 @@ export default ({ refreshUser, userObj }) => {
   };
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form className="profile_form" onSubmit={onSubmit}>
         <input
+          className="profile_input_text"
           type="text"
           placeholder="Display Name"
           onChange={onChange}
           value={newDisplayName}
         />
-        <input type="submit" value="Update Profile" />
+        <input
+          className="profile_input_submit"
+          type="submit"
+          value="Update Profile"
+        />
+        <div className="solid_line" />
+        <button className="profile_logoutBtn" onClick={onLogOutClick}>
+          Log Out
+        </button>
       </form>
-      <button onClick={onLogOutClick}>Log Out</button>
     </>
   );
 };

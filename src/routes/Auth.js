@@ -27,16 +27,24 @@ const Auth = () => {
     <div className="AuthContainer">
       <FontAwesomeIcon
         icon={faTwitter}
-        color={"#04AAFF"}
+        color={"rgba(138, 65, 255, 0.8)"}
         size="3x"
         style={{ marginBottom: 30 }}
       />
       <AuthForm />
       <div className="authBtns">
-        <button className="social_btn" name="google" onClick={onSocialClick}>
+        <button
+          className="social_btn_google"
+          name="google"
+          onClick={onSocialClick}
+        >
           Continue with Google <FontAwesomeIcon icon={faGoogle} />
         </button>
-        <button className="social_btn" name="github" onClick={onSocialClick}>
+        <button
+          className="social_btn_github"
+          name="github"
+          onClick={onSocialClick}
+        >
           Continue with Github <FontAwesomeIcon icon={faGithub} />
         </button>
       </div>

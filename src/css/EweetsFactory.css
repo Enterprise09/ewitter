@@ -1,13 +1,24 @@
+.eweetsfactory_container {
+  display: flex;
+  justify-content: center;
+}
+
 .eweetsfactory_form {
+  width: 320px;
   margin-top: 20px;
   margin-bottom: 50px;
-  width: 100%;
+}
+
+.eweets_inputTextBox {
+  display: flex;
+  position: relative;
+  margin-bottom: 8px;
 }
 
 .eweets_input {
   padding: 8px;
   border: 1.5px solid rgb(138, 65, 255);
-  max-width: 320px;
+  max-width: 350px;
   width: 100%;
   border-radius: 20px;
 }
@@ -19,8 +30,8 @@
   background-color: rgb(138, 65, 255);
   color: white;
   border-radius: 1000px;
-  position: relative;
-  left: -30px;
+  position: absolute;
+  right: 0;
 }
 
 .attach_file_label {

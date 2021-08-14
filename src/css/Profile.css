@@ -1,0 +1,46 @@
+.profile_form {
+  max-width: 320px;
+  width: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.profile_input_text {
+  margin-bottom: 10px;
+  border: 1px dashed red;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.profile_input_submit {
+  padding: 8px;
+  margin-bottom: 20px;
+  background-color: rgba(232, 215, 238, 0.7);
+  color: rgb(138, 65, 255);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.solid_line {
+  border-radius: 10px;
+  border-bottom: 3px solid grey;
+}
+
+.profile_logoutBtn {
+  margin-top: 30px;
+  background-color: rgba(255, 0, 0, 0.623);
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
