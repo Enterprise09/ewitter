@@ -43,3 +43,30 @@
 .eweets_photoBtn {
   display: none;
 }
+
+.preview_photo_box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
+.preview_photo {
+  align-self: center;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.photo_clearBtn {
+  align-self: center;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+}

@@ -1,4 +1,5 @@
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faClosedCaptioning } from "@fortawesome/free-regular-svg-icons";
+import { faPlus, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { dbService, storageService } from "fbase";
 import React, { useState } from "react";
@@ -74,9 +75,12 @@ const EweetFactory = ({ userObj }) => {
           onChange={onFileChange}
         />
         {attachment && (
-          <div>
-            <img src={attachment} width="50px" height="50px" />
-            <button onClick={onClearAttachment}>Clear</button>
+          <div className="preview_photo_box">
+            <img className="preview_photo" src={attachment} />
+            <button className="photo_clearBtn" onClick={onClearAttachment}>
+              Clear Photo
+              {/* <FontAwesomeIcon icon={faWindowClose} color="grey" /> */}
+            </button>
           </div>
         )}
       </form>
